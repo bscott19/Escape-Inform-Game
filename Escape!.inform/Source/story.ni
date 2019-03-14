@@ -11,6 +11,21 @@ To say exit list:
 	repeat with way running through directions: 
 		let place be the room way from the location; 
 		if place is a room, say " [way]".
+		
+[time]
+When play begins: now the time of day is 9:00 AM. 
+At 9:00 AM: say "You have 60 minutes to breakout! (Each turn is one minute)".
+At 9:15 AM: say "You have 45 minutes left to break out!".
+At 9:30 AM: say "You have 30 minutes left to break out!".
+At 9:45 AM: say "You have 15 minutes left to break out!".
+At 9:55 AM: say "The big wall clock begins its 5 minute countdown".
+At 9:56 AM: say "The big wall clock reads 4 minutes remaining".
+At 9:57 AM: say "The big wall clock reads 3 minutes remaining".
+At 9:58 AM: say "The big wall clock reads 2 minutes remaining".
+At 9:59 AM: say "The big wall clock reads 1 minutes remaining".
+At 10:00 AM:
+	 Say "You don't break out in time :(";
+	End the story finally. 
 
 
 [---Rooms and Doors---]
