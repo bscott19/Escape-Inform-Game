@@ -7,11 +7,16 @@
         <result xml:space="preserve">
 
 
+{Intro message here/how directions work in the main room.} The employee takes you in to the NE zone of the room.
+
+NE Zone
+You can see Exit Door here.
+
 Escape!
 An Interactive Fiction by Brent Scott
 Release 1 / Serial number 190314 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 
-Lobby
+NE Zone
 You can see Exit Door here.
 
 &gt;</result>

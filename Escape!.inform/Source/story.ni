@@ -1,5 +1,11 @@
 "Escape!" by Brent Scott
 
+[---Beginning the game---]
+
+When play begins:
+	Say "{Intro message here/how directions work in the main room.} The employee takes you in to the NE zone of the room.";
+	move player to NE Zone.
+
 [---Basic Rules---]
 
 When play begins: 
