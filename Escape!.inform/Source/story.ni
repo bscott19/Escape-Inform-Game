@@ -1,6 +1,5 @@
 "Escape!" by Brent Scott
 
-
 [---Basic Rules---]
 
 When play begins: 
@@ -28,11 +27,9 @@ At 10:00 AM:
 	End the story finally. 
 
 
-[---Rooms and Doors---]
+[---Rooms---]
 
 Lobby is a room. 
-
-	Exit Door is a door. It is west of Lobby. 
 
 NE Zone is a room. It is west of Exit Door. [<-- Starting point]
 
@@ -44,18 +41,78 @@ SW Zone is a room. It is south of NW Zone. It is west of SE Zone.
 
 Closet is a room. It is south of Closet Door. 
 
-	Closet Door is a door. It is south of SE Zone. It is locked and lockable. Paperclip unlocks Closet Door. 
-	Paperclip is a thing. It is inside Desk Drawer. 
-
 Hidden Room is a room. It is west of Hidden Door. [It is undescribed.]
 	
-	Hidden Door is a door. It is west of SW Zone. 
+
+[---Doors---]
+
+[Closet Door]
+Closet Door is a door. It is south of SE Zone. It is locked and lockable. Paperclip unlocks Closet Door.
+	
+Instead of opening Closet Door:
+	if Paperclip is Unfolded:
+		say "You use the long wire of the unfolded to pick the lock on the door. It clicks and the door is unlocked. ";
+		now Closet Door is unlocked;
+	otherwise:
+		say "That doesn't look like it fits in to the key hole."
+		
+[Hidden Door]
+Hidden Door is a door. It is west of SW Zone. 
+		
+[Exit Door]
+Exit Door is a door. It is west of Lobby. It is locked and lockable. 
+
+The description of Exit Door is "A solid metal door and keypad. Have you found the pin code?"
+	After examining Exit Door:
+		now the command prompt is "Enter the 4 digit pin code to unlock door. >";
+		continue the action.
+   
+After reading a command when the command prompt is "Enter the 4 digit pin code to unlock door. >":
+	increment the turn count;
+	if the player's command matches "1234": [<--Temp. Code]
+		now the Exit Door is unlocked;
+		say "**BUZZ**  The door unlocks";
+		now the command prompt is ">";
+	otherwise:
+		say "Incorrect pin, Door remains locked.";
+		now the command prompt is "Would you like to try again? (Yes or No) >";
+	reject the player's command.   
+   
+After reading a command when the command prompt is "Would you like to try again? (Yes or No) >":
+	if the player's command matches "yes" or the player's command matches "y": 
+		now the command prompt is "Enter the 4 digit pin code to unlock door. >";
+		say line break;
+		say run paragraph on;
+		reject the player's command;
+	if the player's command matches "no" or the player's command matches "n": 
+		now the command prompt is ">";
+		say line break;
+		say run paragraph on;
+		reject the player's command;
+	otherwise:
+		say line break;
+		say run paragraph on;
+		reject the player's command.
+		
+[Passcode door credit Felix Larsson on infiction.org ~ https://intfiction.org/t/i-just-want-to-create-a-door-with-a-password-answered/2273/4 ~ Original code altered for this game]
 
 
-[---Scenery---]
+
+[---Scenery & Non-portable objects---]
 
 Desk is a thing in NW zone. It is not portable. 
 	Desk_Drawer is a part of Desk. Desk_Drawer is a closed openable container.
 	
 [Gray_Painting_1 is scenery in NW Zone. Its published name is "Gray Painting". ]
-	
+
+
+
+[---Portable  Objects---]
+
+Paperclip is a thing. It is inside Desk Drawer. The Paperclip is either Intact or Unfolded.
+
+
+
+
+
+
