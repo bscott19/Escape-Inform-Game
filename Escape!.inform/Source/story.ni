@@ -32,6 +32,7 @@ At 10:00 AM:
 	 Say "You don't break out in time :(";
 	End the story finally. 
 
+[Include Secret Doors.]
 
 [---Rooms---]
 
@@ -63,8 +64,9 @@ Instead of opening Closet Door:
 		say "That doesn't look like it fits in to the key hole."
 		
 [Hidden Door]
-Hidden Door is a door. It is west of SW Zone. 
-		
+[The passage door is a secret door.]
+The passage door is west of the SW Zone
+	
 [Exit Door]
 Exit Door is a door. It is west of Lobby. It is locked and lockable. 
 
