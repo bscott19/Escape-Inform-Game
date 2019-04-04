@@ -32,7 +32,7 @@ At 10:00 AM:
 	 Say "You don't break out in time :(";
 	End the story finally. 
 
-[Include Secret Doors.]
+Include Secret Doors by Andrew Owen. 
 
 [---Rooms---]
 
@@ -55,6 +55,8 @@ Hidden Room is a room. It is west of Hidden Door. [It is undescribed.]
 
 [Closet Door]
 Closet Door is a door. It is south of SE Zone. It is locked and lockable. Paperclip unlocks Closet Door.
+
+The description of Close Door is "An ordinary door leading to a small storage closet in the room. It's locked with one of those flimsy locks the criminals always pick."
 	
 Instead of opening Closet Door:
 	if Paperclip is Unfolded:
@@ -64,8 +66,8 @@ Instead of opening Closet Door:
 		say "That doesn't look like it fits in to the key hole."
 		
 [Hidden Door]
-[The passage door is a secret door.]
-The passage door is west of the SW Zone
+The passage door is a secret door.
+The passage door is west of the SW Zone. 
 	
 [Exit Door]
 Exit Door is a door. It is west of Lobby. It is locked and lockable. 

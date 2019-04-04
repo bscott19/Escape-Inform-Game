@@ -14,14 +14,15 @@ You can see Exit Door here.
 
 Escape!
 An Interactive Fiction by Brent Scott
-Release 1 / Serial number 190314 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Release 1 / Serial number 190403 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 
 NE Zone
 You can see Exit Door here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1003"></child>
+        <children><child nodeId="node-1025"></child>
+            <child nodeId="node-1003"></child>
         </children>
     </item>
     <item nodeId="node-1003">
@@ -173,6 +174,42 @@ You can see Closet Door here.
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1025">
+        <command xml:space="preserve">SW</command>
+        <result xml:space="preserve">You can't go that way.
+
+You have 60 minutes to breakout! (Each turn is one minute)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1026"></child>
+        </children>
+    </item>
+    <item nodeId="node-1026">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+SE Zone
+You can see Closet Door here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1027"></child>
+        </children>
+    </item>
+    <item nodeId="node-1027">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+SW Zone
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1028"></child>
+        </children>
+    </item>
+    <item nodeId="node-1028">
+        <command xml:space="preserve">open passage door</command>
+        <result xml:space="preserve"></result>
         <commentary xml:space="preserve"></commentary>
     </item>
 </Skein>
