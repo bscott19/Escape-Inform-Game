@@ -14,24 +14,28 @@ You can see Exit Door here.
 
 Escape!
 An Interactive Fiction by Brent Scott
-Release 1 / Serial number 190403 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Release 1 / Serial number 190405 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 
 NE Zone
 You can see Exit Door here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1025"></child>
+        <children><child nodeId="node-1018"></child>
+            <child nodeId="node-1271"></child>
+            <child nodeId="node-1024"></child>
             <child nodeId="node-1003"></child>
         </children>
     </item>
     <item nodeId="node-1003">
         <command xml:space="preserve">w</command>
-        <result xml:space="preserve">(first opening Exit Door)
+        <result xml:space="preserve">
+NW Zone
+{describe here} there is a small poster with bold print on the wall
 
-NE Zone
-You can see Exit Door here.
+You can see Desk here.
 
+You have 60 minutes to breakout! (Each turn is one minute)
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-1010"></child>
@@ -176,17 +180,97 @@ You can see Closet Door here.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1025">
-        <command xml:space="preserve">SW</command>
-        <result xml:space="preserve">You can't go that way.
+    <item nodeId="node-1024">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+SE Zone
+You can see Closet Door here.
 
 You have 60 minutes to breakout! (Each turn is one minute)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1025"></child>
+        </children>
+    </item>
+    <item nodeId="node-1025">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+SW Zone
+You can see Hidden Door here.
+
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-1026"></child>
         </children>
     </item>
     <item nodeId="node-1026">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">(first opening Hidden Door)
+
+Hidden Room
+You can see Hidden Door and Computer (closed) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1030"></child>
+        </children>
+    </item>
+    <item nodeId="node-1030">
+        <command xml:space="preserve">x computer</command>
+        <result xml:space="preserve">You see nothing special about Computer.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1031"></child>
+        </children>
+    </item>
+    <item nodeId="node-1031">
+        <command xml:space="preserve">open computer</command>
+        <result xml:space="preserve">Logging in...
+A matrix of numbers appears on the screen. 1 2 3 4 5 6 7 8 9 1 2 3 4 4 6 7
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1271">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">(first opening Exit Door)
+It seems to be locked.
+
+You have 60 minutes to breakout! (Each turn is one minute)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1272"></child>
+        </children>
+    </item>
+    <item nodeId="node-1272">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+NW Zone
+You can see Desk here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1273"></child>
+        </children>
+    </item>
+    <item nodeId="node-1273">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1018">
+        <command xml:space="preserve">SW</command>
+        <result xml:space="preserve">You can't go that way.
+
+You have 60 minutes to breakout! (Each turn is one minute)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1019"></child>
+        </children>
+    </item>
+    <item nodeId="node-1019">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">
 SE Zone
@@ -194,20 +278,20 @@ You can see Closet Door here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1027"></child>
+        <children><child nodeId="node-1020"></child>
         </children>
     </item>
-    <item nodeId="node-1027">
+    <item nodeId="node-1020">
         <command xml:space="preserve">w</command>
         <result xml:space="preserve">
 SW Zone
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1028"></child>
+        <children><child nodeId="node-1021"></child>
         </children>
     </item>
-    <item nodeId="node-1028">
+    <item nodeId="node-1021">
         <command xml:space="preserve">open passage door</command>
         <result xml:space="preserve"></result>
         <commentary xml:space="preserve"></commentary>

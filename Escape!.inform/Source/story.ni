@@ -31,8 +31,13 @@ At 9:59 AM: say "The big wall clock reads 1 minutes remaining".
 At 10:00 AM:
 	 Say "You don't break out in time :(";
 	End the story finally. 
+	
+An every turn rule:
+	If player unlocks Exit door:
+		end the story finally;
+		say "Congrats! You escaped!".
 
-Include Secret Doors by Andrew Owen. 
+[Include Secret Doors by Andrew Owen. ]
 
 [---Rooms---]
 
@@ -40,7 +45,7 @@ Lobby is a room.
 
 NE Zone is a room. It is west of Exit Door. [<-- Starting point]
 
-NW Zone is a room. It is west of NE Zone. 
+NW Zone is a room. It is west of NE Zone. The description of NW Zone is "{describe here} there is a small poster with bold print on the wall". 
 
 SE Zone is a room. It is south of NE Zone. 
 
@@ -48,7 +53,7 @@ SW Zone is a room. It is south of NW Zone. It is west of SE Zone.
 
 Closet is a room. It is south of Closet Door. 
 
-Hidden Room is a room. It is west of Hidden Door. [It is undescribed.]
+Hidden Room is a room. It is west of Hidden Door.
 	
 
 [---Doors---]
@@ -66,8 +71,8 @@ Instead of opening Closet Door:
 		say "That doesn't look like it fits in to the key hole."
 		
 [Hidden Door]
-The passage door is a secret door.
-The passage door is west of the SW Zone. 
+The Hidden Door is a [secret] door.
+The Hidden Door is west of the SW Zone. 
 	
 [Exit Door]
 Exit Door is a door. It is west of Lobby. It is locked and lockable. 
@@ -76,10 +81,12 @@ The description of Exit Door is "A solid metal door and keypad. Have you found t
 	After examining Exit Door:
 		now the command prompt is "Enter the 4 digit pin code to unlock door. >";
 		continue the action.
+		
+[Add so that if player says unlock exit door, examine instead]
    
 After reading a command when the command prompt is "Enter the 4 digit pin code to unlock door. >":
 	increment the turn count;
-	if the player's command matches "1234": [<--Temp. Code]
+	if the player's command matches "6264":
 		now the Exit Door is unlocked;
 		say "**BUZZ**  The door unlocks";
 		now the command prompt is ">";
@@ -113,13 +120,19 @@ After reading a command when the command prompt is "Would you like to try again?
 Desk is a thing in NW zone. It is not portable. 
 	Desk_Drawer is a part of Desk. Desk_Drawer is a closed openable container.
 	
-[Gray_Painting_1 is scenery in NW Zone. Its published name is "Gray Painting". ]
-
+Computer is a closed openable container in Hidden Room. It is locked and lockable. Temp Key unlocks computer. 
+Instead of opening Computer:
+	say "Logging in...";
+	say "A line of numbers appears on the screen. 7692649".
+	
+Poster is scenery in NW Zone. The description of Poster is "The poster reads 'ODD NUMBERS ARE A MYTH. Consider only using the even numbers".
+	
 
 
 [---Portable  Objects---]
 
 Paperclip is a thing. It is inside Desk Drawer. The Paperclip is either Intact or Unfolded.
+
 
 
 
