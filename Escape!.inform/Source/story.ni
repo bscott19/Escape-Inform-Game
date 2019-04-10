@@ -4,7 +4,7 @@
 
 When play begins:
 	Say "{Intro message here/how directions work in the main room.} The employee takes you in to the NE zone of the room.";
-	move player to NE Zone.
+	move player to NE Zone, without printing a room description. 
 
 [---Basic Rules---]
 
@@ -51,7 +51,7 @@ SE Zone is a room. It is south of NE Zone.
 
 SW Zone is a room. It is south of NW Zone. It is west of SE Zone. 
 
-Closet is a room. It is south of Closet Door. 
+Closet is a room. It is south of Closet Door. The description of Closet is "A small closet with a few jackets hung on the bar". 
 
 Hidden Room is a room. It is west of Hidden Door.
 	
@@ -125,13 +125,32 @@ Instead of opening Computer:
 	say "Logging in...";
 	say "A line of numbers appears on the screen. 7692649".
 	
-Poster is scenery in NW Zone. The description of Poster is "The poster reads 'ODD NUMBERS ARE A MYTH. Consider only using the even numbers".
+Poster is scenery in NW Zone. The description of Poster is "The poster hangs above the desk and reads 'ODD NUMBERS ARE A MYTH. Consider only using the even numbers".
+
+Painting_1 is scenery in NE Zone. The description of Painting_1 is "A large abstract blue painting hung solidly in place". 
+
+Painting_2 is scenery in SE Zone. The description of Painting_2 is "A large abstract green painting hung solidly in place".
+
+Painting_3 is an object in SW Zone. The description of Painting_3 is "A large abstract red painting hanging slightly askew on the wall".  [This is the painting that covers the door to the hidden room. Player must get help from NPC to lift out of way, revealing door that they have key to.]
 	
 
 
 [---Portable  Objects---]
 
 Paperclip is a thing. It is inside Desk Drawer. The Paperclip is either Intact or Unfolded.
+
+Suede Jacket is a thing. It is inside closet. 
+
+Leather Jacket is a thing. It is inside closet. 
+
+Cotten Jacket is a thing. It is inside closet. 
+	Jacket pocket is a part of Cotten Jacket. Jacket pocket is a closed openable container. 
+	Understand "unzip" as opening. 
+
+
+[---NPC---]
+
+Friend is a male person in SW Zone. The description of Friend is "Your friend begrudgingly agreed to come along with you to do the escape room, but is spending most of the time sleeping on the floor. He's probably only good for a minute or two of help." 
 
 
 
