@@ -33,9 +33,9 @@ At 10:00 AM:
 	End the story finally. 
 	
 An every turn rule:
-	If player unlocks Exit Door:
+	If Exit Door is unlocked:
 		end the story finally;
-		say "Congrats! You escaped!".
+		say "Congrats! You open the door and escape in time!".
 
 [Include Secret Doors by Andrew Owen. ]
 
@@ -67,11 +67,12 @@ Instead of opening Closet Door:
 	if Paperclip is Unfolded:
 		say "You use the long wire of the unfolded paperclip to pick the lock on the door. It clicks and the door is unlocked. ";
 		now Closet Door is unlocked;
+		continue the action; 
 	otherwise:
 		say "The door is locked. If only you had something to manipulate the lock open."
 		
 [Hidden Door]
-The Hidden Door is a [secret] door.
+The Hidden Door is a [secret] door. It is locked and lockable. Unidentified key unlocks Hidden Door. 
 The Hidden Door is west of the SW Zone. 
 	
 [Exit Door]
@@ -135,7 +136,7 @@ Blue Painting is scenery in NE Zone. It is not portable. The description of Blue
 
 Green Painting is scenery in SE Zone. It is not portable. The description of Green Painting is "A large abstract green painting hung solidly in place". 
 
-Red Painting is scenery in SW Zone. The description of Red Painting is "A large abstract red painting hanging slightly askew on the wall".  [This is the painting that covers the door to the hidden room. Player must get help from NPC to lift out of way, revealing door that they have key to.]
+Red Painting is an object in SW Zone. The description of Red Painting is "A large abstract red painting hanging slightly askew on the wall".  [This is the painting that covers the door to the hidden room. Player must get help from NPC to lift out of way, revealing door that they have key to.]
 	
 
 
@@ -153,8 +154,11 @@ Leather Jacket is a thing. It is inside closet.
 
 Cotten Jacket is a thing. It is inside closet. The description of Cotten Jacket is "{do these descriptions} There zipped is a pocket on the front of this jacket". 
 	Jacket pocket is a part of Cotten Jacket. Jacket pocket is a closed openable container. 
+	Unidentified Key is inside Jacket pocket. 
 
 	Understand "unzip" as opening. 
+	
+
 
 
 [---NPC---]
