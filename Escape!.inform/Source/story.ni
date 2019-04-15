@@ -33,7 +33,7 @@ At 10:00 AM:
 	End the story finally. 
 	
 An every turn rule:
-	If player unlocks Exit door:
+	If player unlocks Exit Door:
 		end the story finally;
 		say "Congrats! You escaped!".
 
@@ -43,13 +43,13 @@ An every turn rule:
 
 Lobby is a room. 
 
-NE Zone is a room. It is west of Exit Door. [<-- Starting point]
+NE Zone is a room. It is west of Exit Door. [<-- Starting point] The description of NE Zone is "In this side of the room there is a painting hanging and the exit door, with its flasking keypad."
 
-NW Zone is a room. It is west of NE Zone. The description of NW Zone is "{describe here} there is a small poster with bold print on the wall". 
+NW Zone is a room. It is west of NE Zone. The description of NW Zone is "In this side of the room there is a desk with a small poster hanging above it". 
 
-SE Zone is a room. It is south of NE Zone. 
+SE Zone is a room. It is south of NE Zone. The description of SE Zone is "In this side of the room there is a painting hanging and a small closet with an interesting locked door." 
 
-SW Zone is a room. It is south of NW Zone. It is west of SE Zone. 
+SW Zone is a room. It is south of NW Zone. It is west of SE Zone.  The description of SW Zone is "In this side of the room there is a painting hanging and your friend is sleeping on the floor." 
 
 Closet is a room. It is south of Closet Door. The description of Closet is "A small closet with a few jackets hung on the bar". 
 
@@ -59,16 +59,16 @@ Hidden Room is a room. It is west of Hidden Door.
 [---Doors---]
 
 [Closet Door]
-Closet Door is a door. It is south of SE Zone. It is locked and lockable. Paperclip unlocks Closet Door.
+Closet Door is a door. It is north of Closet and south of SE Zone. It is locked and lockable. Paperclip unlocks Closet Door. 
 
-The description of Close Door is "An ordinary door leading to a small storage closet in the room. It's locked with one of those flimsy locks the criminals always pick."
+The description of Closet Door is "An ordinary door leading to a small storage closet in the room. It's locked with one of those flimsy locks the criminals always pick."
 	
 Instead of opening Closet Door:
 	if Paperclip is Unfolded:
-		say "You use the long wire of the unfolded to pick the lock on the door. It clicks and the door is unlocked. ";
+		say "You use the long wire of the unfolded paperclip to pick the lock on the door. It clicks and the door is unlocked. ";
 		now Closet Door is unlocked;
 	otherwise:
-		say "That doesn't look like it fits in to the key hole."
+		say "The door is locked. If only you had something to manipulate the lock open."
 		
 [Hidden Door]
 The Hidden Door is a [secret] door.
@@ -117,34 +117,43 @@ After reading a command when the command prompt is "Would you like to try again?
 
 [---Scenery & Non-portable objects---]
 
-Desk is a thing in NW zone. It is not portable. 
+Desk is a thing in NW zone. It is not portable. The description of Desk is "There's not much on the desk surface other than a lamp. The desk has a small drawer below it."
 	Desk_Drawer is a part of Desk. Desk_Drawer is a closed openable container.
+	The printed name of Desk_Drawer is "Desk Drawer".
+	Understand "Drawer", "Desk Drawer" as Desk_Drawer. 
 	
-Computer is a closed openable container in Hidden Room. It is locked and lockable. Temp Key unlocks computer. 
-Instead of opening Computer:
-	say "Logging in...";
-	say "A line of numbers appears on the screen. 7692649".
+Computer is an object in Hidden Room. 
+	Instead of examining Computer:
+		say "Logging in...";
+		say "...";
+		say "...";
+		say "A line of numbers appears on the screen: {7692649}".
 	
-Poster is scenery in NW Zone. The description of Poster is "The poster hangs above the desk and reads 'ODD NUMBERS ARE A MYTH. Consider only using the even numbers".
+Poster is scenery in NW Zone. It is not portable. The description of Poster is "The poster hangs above the desk and reads 'ODD NUMBERS ARE A MYTH. Consider only using the even numbers'".
 
-Painting_1 is scenery in NE Zone. The description of Painting_1 is "A large abstract blue painting hung solidly in place". 
+Blue Painting is scenery in NE Zone. It is not portable. The description of Blue Painting is "A large abstract blue painting hung solidly in place". 
 
-Painting_2 is scenery in SE Zone. The description of Painting_2 is "A large abstract green painting hung solidly in place".
+Green Painting is scenery in SE Zone. It is not portable. The description of Green Painting is "A large abstract green painting hung solidly in place". 
 
-Painting_3 is an object in SW Zone. The description of Painting_3 is "A large abstract red painting hanging slightly askew on the wall".  [This is the painting that covers the door to the hidden room. Player must get help from NPC to lift out of way, revealing door that they have key to.]
+Red Painting is scenery in SW Zone. The description of Red Painting is "A large abstract red painting hanging slightly askew on the wall".  [This is the painting that covers the door to the hidden room. Player must get help from NPC to lift out of way, revealing door that they have key to.]
 	
 
 
 [---Portable  Objects---]
 
-Paperclip is a thing. It is inside Desk Drawer. The Paperclip is either Intact or Unfolded.
+Paperclip is a thing. It is inside Desk_Drawer. The Paperclip is either Intact or Unfolded. It is Intact.  The description of Paperclip is "A normally folded paperclip. Perfectly capable of being unfolded."
+	Understand "Unfold paperclip" or "Bend paperclip" or "Straighten paperclip" as unfolding. Unfolding is an action applying to nothing.
+	After Unfolding:
+	say "You unfold the paperclip in to a long, stiff wire, making it perfect to pick a door";
+	now the Paperclip is Unfolded. 
 
 Suede Jacket is a thing. It is inside closet. 
 
 Leather Jacket is a thing. It is inside closet. 
 
-Cotten Jacket is a thing. It is inside closet. 
+Cotten Jacket is a thing. It is inside closet. The description of Cotten Jacket is "{do these descriptions} There zipped is a pocket on the front of this jacket". 
 	Jacket pocket is a part of Cotten Jacket. Jacket pocket is a closed openable container. 
+
 	Understand "unzip" as opening. 
 
 
