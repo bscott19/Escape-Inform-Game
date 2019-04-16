@@ -7,16 +7,20 @@
         <result xml:space="preserve">
 
 
-{Intro message here/how directions work in the main room.} The employee takes you in to the NE zone of the room.
+You have an hour to find the clues, solve the puzzles, and break out of the room. Be sure to examine everything. Your friend is along for the ride, but is very tired and not much help. He'll end up sleeping for most of the hour. {NPC NOT YET FUNCTIONAL FOR BETA TEST}
+
+The main room is divided in to four parts, "NE, NW, SE, and SW". You can't walk diagonally between these zones, so navigate in the main room using: "N, S, E, W". (ex. moving from NE to SW, use S and then W or W and then S. The upper left of the status bar will help by letting you know what directions you can walk in.
+
+The employee takes you in to the NE zone of the room and the time begins.
 
 Escape!
 An Interactive Fiction by Brent Scott
 Release 1 / Serial number 190415 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 
 NE Zone
-In this side of the room there is a painting hanging and the exit door, with its flasking keypad.
+In this side of the room there is a painting hanging and the exit door, with its flashing keypad. (x Exit Door to enter pin code)
 
-You can see Exit Door here.
+You can see Exit Door and Wall Clock here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -29,7 +33,16 @@ You can see Exit Door here.
             <child nodeId="node-1095"></child>
             <child nodeId="node-1025"></child>
             <child nodeId="node-1003"></child>
+            <child nodeId="node-1123"></child>
         </children>
+    </item>
+    <item nodeId="node-1123">
+        <command xml:space="preserve">x wall clock</command>
+        <result xml:space="preserve">A digital clock showiung the time you have remaining to escape. Remember that each turn is one minute.
+9:00 am
+You have 60 minutes to breakout! (Each turn is one minute)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1003">
         <command xml:space="preserve">x picture</command>
@@ -245,9 +258,749 @@ In this side of the room there is a painting hanging and a small closet with an 
     </item>
     <item nodeId="node-1025">
         <command xml:space="preserve">x painting</command>
+        <result xml:space="preserve">A large abstract blue painting hung solidly in place
+
+You have 60 minutes to breakout! (Each turn is one minute. You will be reminded periodically of the time, or you can always examine the wall clock in the NE zone.)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1171"></child>
+        </children>
+    </item>
+    <item nodeId="node-1171">
+        <command xml:space="preserve">x keypad</command>
         <result xml:space="preserve">You can't see any such thing.
 
 &gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1172"></child>
+        </children>
+    </item>
+    <item nodeId="node-1172">
+        <command xml:space="preserve">x wall clock</command>
+        <result xml:space="preserve">A digital clock showing the current time. You started the game at 9:00 am and have 60 minutes to escape. Remember that each turn is one minute.
+it is currently 9:01 am
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1173"></child>
+        </children>
+    </item>
+    <item nodeId="node-1173">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">(first opening Exit Door)
+It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1174"></child>
+        </children>
+    </item>
+    <item nodeId="node-1174">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+SE Zone
+In this side of the room there is a painting hanging and a small closet with an interesting locked door.
+
+You can see Closet Door here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1175"></child>
+        </children>
+    </item>
+    <item nodeId="node-1175">
+        <command xml:space="preserve">x painting</command>
+        <result xml:space="preserve">A large abstract green painting hung solidly in place
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1176"></child>
+        </children>
+    </item>
+    <item nodeId="node-1176">
+        <command xml:space="preserve">x closet door</command>
+        <result xml:space="preserve">An ordinary door leading to a small storage closet in the room. It's locked with one of those flimsy locks the criminals always pick.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1177"></child>
+        </children>
+    </item>
+    <item nodeId="node-1177">
+        <command xml:space="preserve">x self</command>
+        <result xml:space="preserve">As good-looking as ever.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1178"></child>
+        </children>
+    </item>
+    <item nodeId="node-1178">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying nothing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1179"></child>
+        </children>
+    </item>
+    <item nodeId="node-1179">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">(first opening Closet Door)
+The door is locked. If only you had something to manipulate the lock open.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1180"></child>
+        </children>
+    </item>
+    <item nodeId="node-1180">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+SW Zone
+In this side of the room there is a painting hanging and your friend is sleeping on the floor.
+
+You can see Hidden Door, Red Painting and Friend here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1181"></child>
+        </children>
+    </item>
+    <item nodeId="node-1181">
+        <command xml:space="preserve">x friend</command>
+        <result xml:space="preserve">Your friend begrudgingly agreed to come along with you to do the escape room, but is spending most of the time sleeping on the floor. He's probably only good for a minute or two of help. {NPC NOT YET FUNCTIONAL FOR BETA TEST}
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1182"></child>
+        </children>
+    </item>
+    <item nodeId="node-1182">
+        <command xml:space="preserve">x red painting</command>
+        <result xml:space="preserve">A large abstract red painting hanging slightly askew on the wall
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1183"></child>
+        </children>
+    </item>
+    <item nodeId="node-1183">
+        <command xml:space="preserve">straighten painting</command>
+        <result xml:space="preserve">I didn't understand that sentence.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1184"></child>
+        </children>
+    </item>
+    <item nodeId="node-1184">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+NW Zone
+In this side of the room there is a desk with a small poster hanging above it
+
+You can see Desk here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1185"></child>
+        </children>
+    </item>
+    <item nodeId="node-1185">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+SW Zone
+In this side of the room there is a painting hanging and your friend is sleeping on the floor.
+
+You can see Hidden Door, Red Painting and Friend here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1186"></child>
+        </children>
+    </item>
+    <item nodeId="node-1186">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">(first opening Hidden Door)
+It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1187"></child>
+        </children>
+    </item>
+    <item nodeId="node-1187">
+        <command xml:space="preserve">x hidden door</command>
+        <result xml:space="preserve">You see nothing special about Hidden Door.
+
+You have 45 minutes left to break out!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1188"></child>
+        </children>
+    </item>
+    <item nodeId="node-1188">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+SE Zone
+In this side of the room there is a painting hanging and a small closet with an interesting locked door.
+
+You can see Closet Door here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1189"></child>
+        </children>
+    </item>
+    <item nodeId="node-1189">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+SW Zone
+In this side of the room there is a painting hanging and your friend is sleeping on the floor.
+
+You can see Hidden Door, Red Painting and Friend here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1190"></child>
+        </children>
+    </item>
+    <item nodeId="node-1190">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+NW Zone
+In this side of the room there is a desk with a small poster hanging above it
+
+You can see Desk here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1191"></child>
+        </children>
+    </item>
+    <item nodeId="node-1191">
+        <command xml:space="preserve">x poster</command>
+        <result xml:space="preserve">The poster hangs above the desk and reads "ODD NUMBERS ARE A MYTH. Consider only using the even numbers"
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1192"></child>
+        </children>
+    </item>
+    <item nodeId="node-1192">
+        <command xml:space="preserve">x desk</command>
+        <result xml:space="preserve">There's not much on the desk surface other than a potted plant. The desk has a small drawer below it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1193"></child>
+        </children>
+    </item>
+    <item nodeId="node-1193">
+        <command xml:space="preserve">x plant</command>
+        <result xml:space="preserve">An insignificant succulant in a clay pot. It looks like it hasn't had water in a while.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1194"></child>
+        </children>
+    </item>
+    <item nodeId="node-1194">
+        <command xml:space="preserve">take plant</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1195"></child>
+        </children>
+    </item>
+    <item nodeId="node-1195">
+        <command xml:space="preserve">open drawer</command>
+        <result xml:space="preserve">You open Desk Drawer, revealing Paperclip.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1196"></child>
+        </children>
+    </item>
+    <item nodeId="node-1196">
+        <command xml:space="preserve">take paperclip</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1197"></child>
+        </children>
+    </item>
+    <item nodeId="node-1197">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+NE Zone
+In this side of the room there is a painting hanging and the exit door, with its flashing keypad. (x Exit Door to enter pin code)
+
+You can see Exit Door and Wall Clock here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1198"></child>
+        </children>
+    </item>
+    <item nodeId="node-1198">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+SE Zone
+In this side of the room there is a painting hanging and a small closet with an interesting locked door.
+
+You can see Closet Door here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1199"></child>
+        </children>
+    </item>
+    <item nodeId="node-1199">
+        <command xml:space="preserve">pick lock</command>
+        <result xml:space="preserve">I didn't understand that sentence.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1200"></child>
+        </children>
+    </item>
+    <item nodeId="node-1200">
+        <command xml:space="preserve">open door</command>
+        <result xml:space="preserve">The door is locked. If only you had something to manipulate the lock open.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1201"></child>
+        </children>
+    </item>
+    <item nodeId="node-1201">
+        <command xml:space="preserve">manipulate lock</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1202"></child>
+        </children>
+    </item>
+    <item nodeId="node-1202">
+        <command xml:space="preserve">lockpick</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1203"></child>
+        </children>
+    </item>
+    <item nodeId="node-1203">
+        <command xml:space="preserve">open closet door with paperclip</command>
+        <result xml:space="preserve">You unlock Closet Door.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1204"></child>
+        </children>
+    </item>
+    <item nodeId="node-1204">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1205"></child>
+        </children>
+    </item>
+    <item nodeId="node-1205">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">(first opening Closet Door)
+The door is locked. If only you had something to manipulate the lock open.
+
+You have 30 minutes left to break out!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1206"></child>
+        </children>
+    </item>
+    <item nodeId="node-1206">
+        <command xml:space="preserve">unfold</command>
+        <result xml:space="preserve">I didn't understand that sentence.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1207"></child>
+        </children>
+    </item>
+    <item nodeId="node-1207">
+        <command xml:space="preserve">unfold paperclip</command>
+        <result xml:space="preserve">You unfold the paperclip in to a long, stiff wire, making it perfect to pick a door
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1208"></child>
+        </children>
+    </item>
+    <item nodeId="node-1208">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  Paperclip
+  Potted Plant
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1209"></child>
+        </children>
+    </item>
+    <item nodeId="node-1209">
+        <command xml:space="preserve">open closet door</command>
+        <result xml:space="preserve">You use the long wire of the unfolded paperclip to pick the lock on the door. It clicks and the door is unlocked. 
+You open Closet Door.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1210"></child>
+        </children>
+    </item>
+    <item nodeId="node-1210">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1211"></child>
+        </children>
+    </item>
+    <item nodeId="node-1211">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Closet
+A small closet with a few jackets hung on the bar
+
+You can see Closet Door, Suede Jacket, Leather Jacket and Cotten Jacket here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1212"></child>
+        </children>
+    </item>
+    <item nodeId="node-1212">
+        <command xml:space="preserve">x jackets</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1213"></child>
+        </children>
+    </item>
+    <item nodeId="node-1213">
+        <command xml:space="preserve">x jacket</command>
+        <result xml:space="preserve">Which do you mean, Suede Jacket, Leather Jacket, Cotten Jacket or Jacket pocket?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1214"></child>
+        </children>
+    </item>
+    <item nodeId="node-1214">
+        <command xml:space="preserve">x cotten jacket</command>
+        <result xml:space="preserve">A trendy white bomber jacket made out of cotten. There is a zipped pocket on the front of this jacket
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1215"></child>
+        </children>
+    </item>
+    <item nodeId="node-1215">
+        <command xml:space="preserve">unzip pocket</command>
+        <result xml:space="preserve">I only understood you as far as wanting to unzip.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1216"></child>
+        </children>
+    </item>
+    <item nodeId="node-1216">
+        <command xml:space="preserve">x cotten jacket pocket</command>
+        <result xml:space="preserve">I only understood you as far as wanting to examine Cotten Jacket.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1217"></child>
+        </children>
+    </item>
+    <item nodeId="node-1217">
+        <command xml:space="preserve">x jacket pocket</command>
+        <result xml:space="preserve">You open the Jacket pocket, revealing Unidentified Key
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1218"></child>
+        </children>
+    </item>
+    <item nodeId="node-1218">
+        <command xml:space="preserve">take key</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1219"></child>
+        </children>
+    </item>
+    <item nodeId="node-1219">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1220"></child>
+        </children>
+    </item>
+    <item nodeId="node-1220">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1221"></child>
+        </children>
+    </item>
+    <item nodeId="node-1221">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+SE Zone
+In this side of the room there is a painting hanging and a small closet with an interesting locked door.
+
+You can see Closet Door here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1222"></child>
+        </children>
+    </item>
+    <item nodeId="node-1222">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+SW Zone
+In this side of the room there is a painting hanging and your friend is sleeping on the floor.
+
+You can see Hidden Door, Red Painting and Friend here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1223"></child>
+        </children>
+    </item>
+    <item nodeId="node-1223">
+        <command xml:space="preserve">open hidden door</command>
+        <result xml:space="preserve">It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1224"></child>
+        </children>
+    </item>
+    <item nodeId="node-1224">
+        <command xml:space="preserve">unlock hidden door with key</command>
+        <result xml:space="preserve">You unlock Hidden Door.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1225"></child>
+        </children>
+    </item>
+    <item nodeId="node-1225">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+NW Zone
+In this side of the room there is a desk with a small poster hanging above it
+
+You can see Desk here.
+
+You have 15 minutes left to break out!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1226"></child>
+        </children>
+    </item>
+    <item nodeId="node-1226">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+SW Zone
+In this side of the room there is a painting hanging and your friend is sleeping on the floor.
+
+You can see Hidden Door, Red Painting and Friend here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1227"></child>
+        </children>
+    </item>
+    <item nodeId="node-1227">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+SE Zone
+In this side of the room there is a painting hanging and a small closet with an interesting locked door.
+
+You can see Closet Door here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1228"></child>
+        </children>
+    </item>
+    <item nodeId="node-1228">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+SW Zone
+In this side of the room there is a painting hanging and your friend is sleeping on the floor.
+
+You can see Hidden Door, Red Painting and Friend here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1229"></child>
+        </children>
+    </item>
+    <item nodeId="node-1229">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">(first opening Hidden Door)
+
+Hidden Room
+You can see Hidden Door and Computer here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1230"></child>
+        </children>
+    </item>
+    <item nodeId="node-1230">
+        <command xml:space="preserve">x computer</command>
+        <result xml:space="preserve">Logging in...
+...
+...
+A line of numbers appears on the screen: {7692649}
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1231"></child>
+        </children>
+    </item>
+    <item nodeId="node-1231">
+        <command xml:space="preserve">799</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1232"></child>
+        </children>
+    </item>
+    <item nodeId="node-1232">
+        <command xml:space="preserve">take computer</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1233"></child>
+        </children>
+    </item>
+    <item nodeId="node-1233">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1234"></child>
+        </children>
+    </item>
+    <item nodeId="node-1234">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+SW Zone
+In this side of the room there is a painting hanging and your friend is sleeping on the floor.
+
+You can see Hidden Door, Red Painting and Friend here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1235"></child>
+        </children>
+    </item>
+    <item nodeId="node-1235">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+SE Zone
+In this side of the room there is a painting hanging and a small closet with an interesting locked door.
+
+You can see Closet Door here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1236"></child>
+        </children>
+    </item>
+    <item nodeId="node-1236">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">You can't go that way.
+
+The big wall clock begins its 5 minute countdown
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1237"></child>
+        </children>
+    </item>
+    <item nodeId="node-1237">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+NE Zone
+In this side of the room there is a painting hanging and the exit door, with its flashing keypad. (x Exit Door to enter pin code)
+
+You can see Exit Door and Wall Clock here.
+
+The big wall clock reads 4 minutes remaining
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1238"></child>
+        </children>
+    </item>
+    <item nodeId="node-1238">
+        <command xml:space="preserve">x exit door</command>
+        <result xml:space="preserve">A solid metal door and keypad. Have you found the pin code?
+
+The big wall clock reads 3 minutes remaining
+Enter the 4 digit pin code to unlock door. &gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1239"></child>
+        </children>
+    </item>
+    <item nodeId="node-1239">
+        <command xml:space="preserve">6264</command>
+        <result xml:space="preserve">**BUZZ**  The door unlocks
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1240"></child>
+        </children>
+    </item>
+    <item nodeId="node-1240">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+NW Zone
+In this side of the room there is a desk with a small poster hanging above it
+
+You can see Desk here.
+
+Congrats! You open the door and escape in time!
+
+
+
+    *** The End ***
+
+
+
+
+Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
+&gt; </result>
         <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1095">
@@ -617,10 +1370,12 @@ In this side of the room there is a painting hanging and a small closet with an 
 
 You can see Closet Door here.
 
-You have 60 minutes to breakout! (Each turn is one minute)
+You have 60 minutes to breakout! (Each turn is one minute. You will be reminded periodically of the time, or you can always examine the wall clock in the NE zone.)
+
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1057"></child>
+        <children><child nodeId="node-1125"></child>
+            <child nodeId="node-1057"></child>
             <child nodeId="node-1053"></child>
         </children>
     </item>
@@ -904,6 +1659,150 @@ Enter the 4 digit pin code to unlock door. &gt;</result>
         <result xml:space="preserve">
 Lobby
 You can see Exit Door here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1125">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+NE Zone
+In this side of the room there is a painting hanging and the exit door, with its flashing keypad. (x Exit Door to enter pin code)
+
+You can see Exit Door and Wall Clock here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1133"></child>
+            <child nodeId="node-1126"></child>
+        </children>
+    </item>
+    <item nodeId="node-1126">
+        <command xml:space="preserve">x wall clock</command>
+        <result xml:space="preserve">A digital clock showing the current time. You started the game at 9:00 am and have 60 minutes to escape. Remember that each turn is one minute.
+it is currently 9:02 am
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1133">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+NW Zone
+In this side of the room there is a desk with a small poster hanging above it
+
+You can see Desk here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1134"></child>
+        </children>
+    </item>
+    <item nodeId="node-1134">
+        <command xml:space="preserve">open desk drawer</command>
+        <result xml:space="preserve">You open Desk Drawer, revealing Paperclip.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1135"></child>
+        </children>
+    </item>
+    <item nodeId="node-1135">
+        <command xml:space="preserve">take paperclip</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1136"></child>
+        </children>
+    </item>
+    <item nodeId="node-1136">
+        <command xml:space="preserve">unfold paperclip</command>
+        <result xml:space="preserve">You unfold the paperclip in to a long, stiff wire, making it perfect to pick a door
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1137"></child>
+        </children>
+    </item>
+    <item nodeId="node-1137">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+SW Zone
+In this side of the room there is a painting hanging and your friend is sleeping on the floor.
+
+You can see Hidden Door, Red Painting and Friend here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1138"></child>
+        </children>
+    </item>
+    <item nodeId="node-1138">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">(first opening Hidden Door)
+It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1139"></child>
+        </children>
+    </item>
+    <item nodeId="node-1139">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+SE Zone
+In this side of the room there is a painting hanging and a small closet with an interesting locked door.
+
+You can see Closet Door here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1140"></child>
+        </children>
+    </item>
+    <item nodeId="node-1140">
+        <command xml:space="preserve">unlock closet door</command>
+        <result xml:space="preserve">(with Paperclip)
+You unlock Closet Door.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1141"></child>
+        </children>
+    </item>
+    <item nodeId="node-1141">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">(first opening Closet Door)
+You use the long wire of the unfolded paperclip to pick the lock on the door. It clicks and the door is unlocked. 
+Closet
+A small closet with a few jackets hung on the bar
+
+You can see Closet Door, Suede Jacket, Leather Jacket and Cotten Jacket here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1142"></child>
+        </children>
+    </item>
+    <item nodeId="node-1142">
+        <command xml:space="preserve">x cotten jacket</command>
+        <result xml:space="preserve">A trendy white bomber jacket made out of cotten. There is a zipped pocket on the front of this jacket
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1155"></child>
+        </children>
+    </item>
+    <item nodeId="node-1155">
+        <command xml:space="preserve">x pocket</command>
+        <result xml:space="preserve">you open the Jacket pocket, revealing Unidentified Key
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1169"></child>
+        </children>
+    </item>
+    <item nodeId="node-1169">
+        <command xml:space="preserve">take key</command>
+        <result xml:space="preserve">Taken.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>

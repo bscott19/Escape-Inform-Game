@@ -3,13 +3,17 @@
 [---Beginning the game---]
 
 When play begins:
-	Say "{Intro message here/how directions work in the main room.} The employee takes you in to the NE zone of the room.";
+	Say "You have an hour to find the clues, solve the puzzles, and break out of the room. Be sure to examine everything. Your friend is along for the ride, but is very tired and not much help. He'll end up sleeping for most of the hour. {NPC NOT YET FUNCTIONAL FOR BETA TEST} 
+	
+	The main room is divided in to four parts, 'NE, NW, SE, and SW'. You can't walk diagonally between these zones, so navigate in the main room using: 'N, S, E, W'. (ex. moving from NE to SW, use S and then W or W and then S. The upper left of the status bar will help by letting you know what directions you can walk in. 
+	
+	The employee takes you in to the NE zone of the room and the time begins.";
 	move player to NE Zone, without printing a room description. 
 
 [---Basic Rules---]
 
 When play begins: 
-    now left hand status line is "Walk to the: [exit list]"; 
+    now left hand status line is "You can walk to the: [exit list]"; 
     now right hand status line is "[location]".
 To say exit list: 
 	let place be location; 
@@ -19,7 +23,7 @@ To say exit list:
 		
 [time]
 When play begins: now the time of day is 9:00 AM. 
-At 9:00 AM: say "You have 60 minutes to breakout! (Each turn is one minute)".
+At 9:00 AM: say "You have 60 minutes to breakout! (Each turn is one minute. You will be reminded periodically of the time, or you can always examine the wall clock in the NE zone.)".
 At 9:15 AM: say "You have 45 minutes left to break out!".
 At 9:30 AM: say "You have 30 minutes left to break out!".
 At 9:45 AM: say "You have 15 minutes left to break out!".
@@ -43,7 +47,7 @@ An every turn rule:
 
 Lobby is a room. 
 
-NE Zone is a room. It is west of Exit Door. [<-- Starting point] The description of NE Zone is "In this side of the room there is a painting hanging and the exit door, with its flasking keypad."
+NE Zone is a room. It is west of Exit Door. [<-- Starting point] The description of NE Zone is "In this side of the room there is a painting hanging and the exit door, with its flashing keypad. (x Exit Door to enter pin code)"
 
 NW Zone is a room. It is west of NE Zone. The description of NW Zone is "In this side of the room there is a desk with a small poster hanging above it". 
 
@@ -83,7 +87,6 @@ The description of Exit Door is "A solid metal door and keypad. Have you found t
 		now the command prompt is "Enter the 4 digit pin code to unlock door. >";
 		continue the action.
 		
-[Add so that if player says unlock exit door, examine instead]
    
 After reading a command when the command prompt is "Enter the 4 digit pin code to unlock door. >":
 	increment the turn count;
@@ -118,10 +121,12 @@ After reading a command when the command prompt is "Would you like to try again?
 
 [---Scenery & Non-portable objects---]
 
-Desk is a thing in NW zone. It is not portable. The description of Desk is "There's not much on the desk surface other than a lamp. The desk has a small drawer below it."
+Desk is a thing in NW zone. It is not portable. The description of Desk is "There's not much on the desk surface other than a potted plant. The desk has a small drawer below it."
 	Desk_Drawer is a part of Desk. Desk_Drawer is a closed openable container.
 	The printed name of Desk_Drawer is "Desk Drawer".
 	Understand "Drawer", "Desk Drawer" as Desk_Drawer. 
+	
+	Potted Plant is an object on the Desk. It is undescribed. The description of Potted Plant is "An insignificant succulant in a clay pot. It looks like it hasn't had water in a while."
 	
 Computer is an object in Hidden Room. 
 	Instead of examining Computer:
@@ -137,6 +142,11 @@ Blue Painting is scenery in NE Zone. It is not portable. The description of Blue
 Green Painting is scenery in SE Zone. It is not portable. The description of Green Painting is "A large abstract green painting hung solidly in place". 
 
 Red Painting is an object in SW Zone. The description of Red Painting is "A large abstract red painting hanging slightly askew on the wall".  [This is the painting that covers the door to the hidden room. Player must get help from NPC to lift out of way, revealing door that they have key to.]
+
+Wall Clock is an object in NE Zone. Wall clock is not portable. 
+	Instead of examining wall clock:
+		say "A digital clock showing the current time. You started the game at 9:00 am and have 60 minutes to escape. Remember that each turn is one minute.";
+		say "it is currently [time of day]". 
 	
 
 
@@ -148,22 +158,25 @@ Paperclip is a thing. It is inside Desk_Drawer. The Paperclip is either Intact o
 	say "You unfold the paperclip in to a long, stiff wire, making it perfect to pick a door";
 	now the Paperclip is Unfolded. 
 
-Suede Jacket is a thing. It is inside closet. 
+Suede Jacket is a thing. It is inside closet. The description of Suede Jacket is "A very fashionable blue suede jacket."
 
-Leather Jacket is a thing. It is inside closet. 
+Leather Jacket is a thing. It is inside closet. The description of Leather Jacket is "An emo looking slick black leather jacket."
 
-Cotten Jacket is a thing. It is inside closet. The description of Cotten Jacket is "{do these descriptions} There zipped is a pocket on the front of this jacket". 
+Cotten Jacket is a thing. It is inside closet. The description of Cotten Jacket is "A trendy white bomber jacket made out of cotten. There is a zipped pocket on the front of this jacket". 
 	Jacket pocket is a part of Cotten Jacket. Jacket pocket is a closed openable container. 
-	Unidentified Key is inside Jacket pocket. 
-
 	Understand "unzip" as opening. 
 	
+	Instead of examining Jacket Pocket:
+		Say "You open the Jacket pocket, revealing Unidentified Key";
+		Now the Jacket pocket is open.  
+	
+	Unidentified Key is inside Jacket pocket. The description of Unidentified Key is "An unidentified door key."
 
 
 
 [---NPC---]
 
-Friend is a male person in SW Zone. The description of Friend is "Your friend begrudgingly agreed to come along with you to do the escape room, but is spending most of the time sleeping on the floor. He's probably only good for a minute or two of help." 
+Friend is a male person in SW Zone. The description of Friend is "Your friend begrudgingly agreed to come along with you to do the escape room, but is spending most of the time sleeping on the floor. He's probably only good for a minute or two of help. {NPC NOT YET FUNCTIONAL FOR BETA TEST}" 
 
 
 
