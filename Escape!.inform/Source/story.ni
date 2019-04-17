@@ -3,7 +3,7 @@
 [---Beginning the game---]
 
 When play begins:
-	Say "You have an hour to find the clues, solve the puzzles, and break out of the room. Be sure to examine everything. Your friend is along for the ride, but is very tired and not much help. He'll end up sleeping for most of the hour. {NPC NOT YET FUNCTIONAL FOR BETA TEST} 
+	Say "You have an hour to find the clues, solve the puzzles, and break out of the room. Be sure to examine everything. Your friend is along for the ride, but is very tired and not much help. He'll end up sleeping for most of the hour.
 	
 	The main room is divided in to four parts, 'NE, NW, SE, and SW'. You can't walk diagonally between these zones, so navigate in the main room using: 'N, S, E, W'. (ex. moving from NE to SW, use S and then W or W and then S. The upper left of the status bar will help by letting you know what directions you can walk in. A door called 'Exit Door' is the final puzzle to escape the room and win. 
 	
@@ -57,8 +57,7 @@ SW Zone is a room. It is south of NW Zone. It is west of SE Zone.  The descripti
 
 Closet is a room. It is south of Closet Door. The description of Closet is "A small closet with a few jackets hung on the bar". 
 
-Hidden Room is a room. It is west of Hidden Door.
-	
+Hidden Room is a room. It is west of Hidden Door. The description of Hidden Room is "A small dark room with only one thing in it. The computer sits on the floor, plugged in to the wall."
 
 [---Doors---]
 
@@ -76,8 +75,9 @@ Instead of opening Closet Door:
 		say "The door is locked. If only you had something to manipulate the lock open."
 		
 [Hidden Door]
-The Hidden Door is a [secret] door. It is locked and lockable. Unidentified key unlocks Hidden Door. 
+The Hidden Door is a door and scenery. It is locked and lockable. Unidentified key unlocks Hidden Door. 
 The Hidden Door is west of the SW Zone. 
+The description of Hidden Door is "[if door is closed]You can see the faint outline of a door [otherwise]The door is swung open[end if]."
 	
 [Exit Door]
 Exit Door is a door. It is west of Lobby. It is locked and lockable. 
@@ -87,7 +87,6 @@ The description of Exit Door is "The final door, leading to the lobby once you e
 		now the command prompt is "Enter the 4 digit pin code to unlock door. >";
 		continue the action.
 		
-   
 After reading a command when the command prompt is "Enter the 4 digit pin code to unlock door. >":
 	increment the turn count;
 	if the player's command matches "6264":
@@ -141,10 +140,24 @@ Blue Painting is scenery in NE Zone. It is not portable. The description of Blue
 
 Green Painting is scenery in SE Zone. It is not portable. The description of Green Painting is "A large abstract green painting hung solidly in place". 
 
-Red Painting is an object in SW Zone. The description of Red Painting is "A large abstract red painting hanging slightly askew on the wall".  [This is the painting that covers the door to the hidden room. Player must get help from NPC to lift out of way, revealing door that they have key to.]
+Red Painting is an object in SW Zone. The description of Red Painting is "A large abstract red painting hanging slightly askew on the wall".
 
+	[Looking behind is an action applying to one visible thing.
+		Understand "look behind [something]" as looking behind.
 
+	Instead of looking behind Red Painting:
+		say "You look behind the red painting and see the faint outline of a door."]
 
+Instead of taking painting:
+	if painting is not handled:
+		if Friend is asleep:
+			say "It's too heavy to move alone. You need to WAKE your friend to help you.";
+		otherwise:
+			say "Your friend helps you take the heavy painting off the wall revealing on the wall behind a hidden door in the east wall.";
+			now the description of Painting is "Leaning against the east wall where you and your Friend placed it.";
+			now the painting is handled;
+	otherwise:
+		say "No need to move that heavy thing again."
 
 	Understand "straighten painting" as a mistake ("The painting is to heavy for you to keep straight"). 
 
@@ -177,12 +190,23 @@ Cotton Jacket is a thing. It is inside closet. The description of Cotton Jacket 
 		Now the Jacket pocket is open.  
 	
 	Unidentified Key is inside Jacket pocket. The description of Unidentified Key is "An unidentified door key."
+		Understand "key" as Unidentified Key. 
 
 
 
 [---NPC---]
 
-Friend is a male person in SW Zone. The description of Friend is "Your friend begrudgingly agreed to come along with you to do the escape room, but is spending most of the time sleeping on the floor. He's probably only good for a minute or two of help. {NPC NOT YET FUNCTIONAL FOR BETA TEST}" 
+A person can be asleep or awake.
+A person is usually awake.
+
+Friend is a male person in SW Zone. Friend is asleep. The description of Friend is "Your friend begrudgingly agreed to come along with you to do the escape room, but is spending most of the time sleeping on the floor. You'll need to WAKE him before he can help you." 
+
+Instead of waking Friend when Friend is asleep:
+	say "You wake up your friend. He is now ready to help.";
+	now Friend is awake.
+	
+Instead of waking Friend when Friend is awake:
+	say "I'm awake already! What do you need?".
 
 
 
