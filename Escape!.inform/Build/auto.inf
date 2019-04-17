@@ -38998,7 +38998,7 @@ Verb meta 'tree'
                     ((
                         ((((((formal_par1 ofclass K1_room) && (formal_par1 ofclass K1_room))))) && ((
                         formal_rv = MapConnection(formal_par1,formal_par0)) | 1)
-                        )|| (ArgumentTypeFailed(21))
+                        )|| (ArgumentTypeFailed(24))
 
                     ))
                 +

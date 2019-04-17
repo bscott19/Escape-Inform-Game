@@ -1,5 +1,8 @@
 "Escape!" by Brent Scott
 
+[Passcode door credit Felix Larsson on infiction.org ~ https://intfiction.org/t/i-just-want-to-create-a-door-with-a-password-answered/2273/4 ~ Original code altered for this game]
+[Much of Red Painting and NPC derived from Mrs. Kiang's code, and would not be possible without her!]
+
 [---Beginning the game---]
 
 When play begins:

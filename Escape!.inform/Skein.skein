@@ -7,7 +7,7 @@
         <result xml:space="preserve">
 
 
-You have an hour to find the clues, solve the puzzles, and break out of the room. Be sure to examine everything. Your friend is along for the ride, but is very tired and not much help. He'll end up sleeping for most of the hour. {NPC NOT YET FUNCTIONAL FOR BETA TEST}
+You have an hour to find the clues, solve the puzzles, and break out of the room. Be sure to examine everything. Your friend is along for the ride, but is very tired and not much help. He'll end up sleeping for most of the hour.
 
 The main room is divided in to four parts, "NE, NW, SE, and SW". You can't walk diagonally between these zones, so navigate in the main room using: "N, S, E, W". (ex. moving from NE to SW, use S and then W or W and then S. The upper left of the status bar will help by letting you know what directions you can walk in. A door called "Exit Door" is the final puzzle to escape the room and win.
 
