@@ -5,7 +5,7 @@
 When play begins:
 	Say "You have an hour to find the clues, solve the puzzles, and break out of the room. Be sure to examine everything. Your friend is along for the ride, but is very tired and not much help. He'll end up sleeping for most of the hour. {NPC NOT YET FUNCTIONAL FOR BETA TEST} 
 	
-	The main room is divided in to four parts, 'NE, NW, SE, and SW'. You can't walk diagonally between these zones, so navigate in the main room using: 'N, S, E, W'. (ex. moving from NE to SW, use S and then W or W and then S. The upper left of the status bar will help by letting you know what directions you can walk in. 
+	The main room is divided in to four parts, 'NE, NW, SE, and SW'. You can't walk diagonally between these zones, so navigate in the main room using: 'N, S, E, W'. (ex. moving from NE to SW, use S and then W or W and then S. The upper left of the status bar will help by letting you know what directions you can walk in. A door called 'Exit Door' is the final puzzle to escape the room and win. 
 	
 	The employee takes you in to the NE zone of the room and the time begins.";
 	move player to NE Zone, without printing a room description. 
@@ -41,7 +41,7 @@ An every turn rule:
 		end the story finally;
 		say "Congrats! You open the door and escape in time!".
 
-[Include Secret Doors by Andrew Owen. ]
+Description of player is "You're a high school kid with one of your friends out for a good Friday night. Too bad your friend is tired. You're wearing jeans with an olive green oxford style shirt."
 
 [---Rooms---]
 
@@ -63,7 +63,7 @@ Hidden Room is a room. It is west of Hidden Door.
 [---Doors---]
 
 [Closet Door]
-Closet Door is a door. It is north of Closet and south of SE Zone. It is locked and lockable. Paperclip unlocks Closet Door. 
+Closet Door is a door. It is north of Closet and south of SE Zone. It is locked and lockable.
 
 The description of Closet Door is "An ordinary door leading to a small storage closet in the room. It's locked with one of those flimsy locks the criminals always pick."
 	
@@ -82,7 +82,7 @@ The Hidden Door is west of the SW Zone.
 [Exit Door]
 Exit Door is a door. It is west of Lobby. It is locked and lockable. 
 
-The description of Exit Door is "A solid metal door and keypad. Have you found the pin code?"
+The description of Exit Door is "The final door, leading to the lobby once you escape. It's a solid metal door with a keypad. Have you found the pin code?"
 	After examining Exit Door:
 		now the command prompt is "Enter the 4 digit pin code to unlock door. >";
 		continue the action.
@@ -126,9 +126,9 @@ Desk is a thing in NW zone. It is not portable. The description of Desk is "Ther
 	The printed name of Desk_Drawer is "Desk Drawer".
 	Understand "Drawer", "Desk Drawer" as Desk_Drawer. 
 	
-	Potted Plant is an object on the Desk. It is undescribed. The description of Potted Plant is "An insignificant succulant in a clay pot. It looks like it hasn't had water in a while."
+	Potted Plant is an object on the Desk. It is undescribed. It is not portable. The description of Potted Plant is "An insignificant succulant in a clay pot. It looks like it hasn't had water in a while."
 	
-Computer is an object in Hidden Room. 
+Computer is an object in Hidden Room. It is not portable.
 	Instead of examining Computer:
 		say "Logging in...";
 		say "...";
@@ -143,11 +143,17 @@ Green Painting is scenery in SE Zone. It is not portable. The description of Gre
 
 Red Painting is an object in SW Zone. The description of Red Painting is "A large abstract red painting hanging slightly askew on the wall".  [This is the painting that covers the door to the hidden room. Player must get help from NPC to lift out of way, revealing door that they have key to.]
 
+
+
+
+	Understand "straighten painting" as a mistake ("The painting is to heavy for you to keep straight"). 
+
 Wall Clock is an object in NE Zone. Wall clock is not portable. 
 	Instead of examining wall clock:
 		say "A digital clock showing the current time. You started the game at 9:00 am and have 60 minutes to escape. Remember that each turn is one minute.";
 		say "it is currently [time of day]". 
-	
+		
+Keypad is scenery in NE Zone. The description of keypad is "A simple numeric keypad with a flashing amber keypad. Examine the Exit Door to use the keypad."	
 
 
 [---Portable  Objects---]
@@ -162,8 +168,8 @@ Suede Jacket is a thing. It is inside closet. The description of Suede Jacket is
 
 Leather Jacket is a thing. It is inside closet. The description of Leather Jacket is "An emo looking slick black leather jacket."
 
-Cotten Jacket is a thing. It is inside closet. The description of Cotten Jacket is "A trendy white bomber jacket made out of cotten. There is a zipped pocket on the front of this jacket". 
-	Jacket pocket is a part of Cotten Jacket. Jacket pocket is a closed openable container. 
+Cotton Jacket is a thing. It is inside closet. The description of Cotton Jacket is "A trendy white bomber jacket made out of cotton. There is a zipped pocket on the front of this jacket". 
+	Jacket pocket is a part of Cotton Jacket. Jacket pocket is a closed openable container. 
 	Understand "unzip" as opening. 
 	
 	Instead of examining Jacket Pocket:
