@@ -6,7 +6,7 @@
 [---Beginning the game---]
 
 When play begins:
-	Say "You have an hour to find the clues, solve the puzzles, and break out of the room. Be sure to examine everything. Your friend is along for the ride, but is very tired and not much help. He'll end up sleeping for most of the hour.
+	Say "You have an hour to find the clues, solve the puzzles, and break out of the room. Be sure to examine everything to find clues. Your friend is along for the ride, but is very tired and not much help. He'll end up sleeping for most of the hour.
 	
 	The main room is divided in to four parts, 'NE, NW, SE, and SW'. You can't walk diagonally between these zones, so navigate in the main room using: 'N, S, E, W'. (ex. moving from NE to SW, use S and then W or W and then S. The upper left of the status bar will help by letting you know what directions you can walk in. A door called 'Exit Door' is the final puzzle to escape the room and win. 
 	
@@ -50,7 +50,7 @@ Description of player is "You're a high school kid with one of your friends out 
 
 Lobby is a room. 
 
-NE Zone is a room. It is west of Exit Door. [<-- Starting point] The description of NE Zone is "In this side of the room there is a painting hanging and the exit door, with its flashing keypad. (x Exit Door to enter pin code)"
+NE Zone is a room. It is west of Exit Door. [<-- Starting point] The description of NE Zone is "In this side of the room there is a painting hanging and the exit door, with its flashing keypad. (Examine the exit door to enter pin code)"
 
 NW Zone is a room. It is west of NE Zone. The description of NW Zone is "In this side of the room there is a desk with a small poster hanging above it". 
 
@@ -58,7 +58,8 @@ SE Zone is a room. It is south of NE Zone. The description of SE Zone is "In thi
 
 SW Zone is a room. It is south of NW Zone. It is west of SE Zone.  The description of SW Zone is "In this side of the room there is a painting hanging and your friend is sleeping on the floor." 
 
-Closet is a room. It is south of Closet Door. The description of Closet is "A small closet with a few jackets hung on the bar". 
+Closet is a room. It is south of Closet Door. The description of Closet is "A small closet south of SE Zone with a few jackets hung on the bar". 
+	Understand “small closet” as closet. 
 
 Hidden Room is a room. It is west of Hidden Door. The description of Hidden Room is "A small dark room with only one thing in it. The computer sits on the floor, plugged in to the wall."
 
@@ -76,6 +77,8 @@ Instead of opening Closet Door:
 		continue the action; 
 	otherwise:
 		say "The door is locked. If only you had something to manipulate the lock open."
+		
+	Understand "pick lock" as opening. 
 		
 [Hidden Door]
 The Hidden Door is a door and scenery. It is locked and lockable. Unidentified key unlocks Hidden Door. 
@@ -124,9 +127,9 @@ After reading a command when the command prompt is "Would you like to try again?
 [---Scenery & Non-portable objects---]
 
 Desk is a thing in NW zone. It is not portable. The description of Desk is "There's not much on the desk surface other than a potted plant. The desk has a small drawer below it."
-	Desk_Drawer is a part of Desk. Desk_Drawer is a closed openable container.
+	Desk_Drawer is a part of Desk. Desk_Drawer is a closed openable container. The description of Desk_Drawer is "A small drawer hung under the desk". 
 	The printed name of Desk_Drawer is "Desk Drawer".
-	Understand "Drawer", "Desk Drawer" as Desk_Drawer. 
+	Understand "Drawer", "Desk Drawer", "Small Drawer" as Desk_Drawer. 
 	
 	Potted Plant is an object on the Desk. It is undescribed. It is not portable. The description of Potted Plant is "An insignificant succulant in a clay pot. It looks like it hasn't had water in a while."
 	
@@ -138,6 +141,7 @@ Computer is an object in Hidden Room. It is not portable.
 		say "A line of numbers appears on the screen: {7692649}".
 	
 Poster is scenery in NW Zone. It is not portable. The description of Poster is "The poster hangs above the desk and reads 'ODD NUMBERS ARE A MYTH. Consider only using the even numbers'".
+	Understand "Small Poster" as Poster. 
 
 Blue Painting is scenery in NE Zone. It is not portable. The description of Blue Painting is "A large abstract blue painting hung solidly in place". 
 
@@ -203,6 +207,8 @@ A person can be asleep or awake.
 A person is usually awake.
 
 Friend is a male person in SW Zone. Friend is asleep. The description of Friend is "Your friend begrudgingly agreed to come along with you to do the escape room, but is spending most of the time sleeping on the floor. You'll need to WAKE him before he can help you." 
+
+Understand “sleeping friend” as friend.
 
 Instead of waking Friend when Friend is asleep:
 	say "You wake up your friend. He is now ready to help.";
