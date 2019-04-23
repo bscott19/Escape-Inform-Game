@@ -8,16 +8,23 @@
         <bibliographic>
             <title>Escape!</title>
             <author>Brent Scott</author>
-            <headline>An Interactive Fiction</headline>
-            <genre>Fiction</genre>
+            <headline>An interactive fiction escape room</headline>
+            <genre>Logic/Puzzle</genre>
             <firstpublished>2019</firstpublished>
+            <description>The door just locked shut and 1 hour on the large wall clock starts counting down. You have just one hour to solve the clues, puzzles and patterns to escape the room. Your friend is here to help, but just got done drinking quite a lot so I'm not sure how much help he'll be. Good luck breaking out!</description>
             <language>en</language>
             <group>Inform</group>
         </bibliographic>
+        <cover>
+            <format>png</format>
+            <height>960</height>
+            <width>960</width>
+            <description>The cover art.</description>
+        </cover>
         <releases>
             <attached>
                 <release>
-                    <releasedate>2019-04-21</releasedate>
+                    <releasedate>2019-04-22</releasedate>
                     <version>1</version>
                     <compiler>Inform 7</compiler>
                     <compilerversion>6M62</compilerversion>
@@ -27,12 +34,13 @@
         <colophon>
             <generator>Inform 7</generator>
             <generatorversion>6M62</generatorversion>
-            <originated>2019-04-21</originated>
+            <originated>2019-04-22</originated>
         </colophon>
         <glulx>
-            <serial>190421</serial>
+            <serial>190422</serial>
             <release>1</release>
             <compiler>Inform 7 build 6M62</compiler>
+            <coverpicture>1</coverpicture>
         </glulx>
     </story>
 </ifindex>

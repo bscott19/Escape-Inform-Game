@@ -13,8 +13,8 @@ release to "/Users/brentscott/Documents/GitHub/Escape-Inform-Game/Escape!.materi
 storyfile leafname "Escape!.gblorb"
 storyfile "/Users/brentscott/Documents/GitHub/Escape-Inform-Game/Escape!.inform/Build/output.ulx" include
 ifiction "/Users/brentscott/Documents/GitHub/Escape-Inform-Game/Escape!.inform/Metadata.iFiction" include
-cover "/Applications/Inform.app/Contents/Resources/Internal/Miscellany/Cover.jpg"
-picture 1 "/Applications/Inform.app/Contents/Resources/Internal/Miscellany/Cover.jpg"
+cover "/Users/brentscott/Documents/GitHub/Escape-Inform-Game/Escape!.materials/Cover.png"
+picture 1 "/Users/brentscott/Documents/GitHub/Escape-Inform-Game/Escape!.materials/Cover.png"
 
 ! Placeholder variables
 
@@ -23,16 +23,34 @@ placeholder [RELEASE] = "1"
 placeholder [YEAR] = "2019"
 placeholder [TITLE] = "Escape!"
 placeholder [AUTHOR] = "Brent Scott"
-placeholder [BLURB] = "A work of interactive fiction."
+placeholder [BLURB] = "The door just locked shut and 1 hour on the large wall clock starts counting down. You have just one hour to solve the clues, puzzles and patterns to escape the room. Your friend is here to help, but just got done drinking quite a lot so I'm not sure how much help he'll be. Good luck breaking out!"
 
 ! Other material to release
 
-status alternative ||Using 'Release along with cover art', to provide something more distinctive than the default artwork above&nbsp;<a href=inform:/doc403.html><img border=0 src=inform:/doc_images/help.png></a>||
-status alternative ||Using 'Release along with a website'&nbsp;<a href=inform:/doc405.html><img border=0 src=inform:/doc_images/help.png></a>||
-status alternative ||Using 'Release along with an interpreter', for in-browser play on your website&nbsp;<a href=inform:/doc406.html><img border=0 src=inform:/doc_images/help.png></a>||
+ifiction
+
+! Website instructions
+
+placeholder [ENCODEDSTORYFILE] = "Escape!.gblorb.js"
+template path "/Users/brentscott/Documents/GitHub/Escape-Inform-Game/Escape!.materials/Templates"
+template path "/Users/brentscott/Library/Inform/Templates"
+template path "/Applications/Inform.app/Contents/Resources/Internal/Templates"
+placeholder [INTERPRETERSCRIPTS] = " "
+interpreter "Quixe" "g"
+base64 "/Users/brentscott/Documents/GitHub/Escape-Inform-Game/Escape!.inform/Build/output.ulx" to "/Users/brentscott/Documents/GitHub/Escape-Inform-Game/Escape!.materials/Release/interpreter/Escape!.gblorb.js"
+
+! Website instructions
+
+template path "/Users/brentscott/Documents/GitHub/Escape-Inform-Game/Escape!.materials/Templates"
+template path "/Users/brentscott/Library/Inform/Templates"
+template path "/Applications/Inform.app/Contents/Resources/Internal/Templates"
+css
+website "Standard"
+status instruction ||&nbsp;<a href="source:story.ni#line10"><img border=0 src=inform:/doc_images/Reveal.tif></a>||
+status instruction ||&nbsp;<a href="source:story.ni#line11"><img border=0 src=inform:/doc_images/Reveal.tif></a>||
+status instruction ||&nbsp;<a href="source:story.ni#line12"><img border=0 src=inform:/doc_images/Reveal.tif></a>||
 status alternative ||Using 'Release along with a file of "Such-and-Such" called "whatever.pdf"', perhaps to add a manual, or a welcoming note&nbsp;<a href=inform:/doc401.html><img border=0 src=inform:/doc_images/help.png></a>||
 status alternative ||Using 'Release along with the source text'&nbsp;<a href=inform:/doc412.html><img border=0 src=inform:/doc_images/help.png></a>||
 status alternative ||Using 'Release along with a solution'&nbsp;<a href=inform:/doc411.html><img border=0 src=inform:/doc_images/help.png></a>||
-status alternative ||Using 'Release along with the library card'&nbsp;<a href=inform:/doc412.html><img border=0 src=inform:/doc_images/help.png></a>||
 status alternative ||Using 'Release along with the introductory booklet'&nbsp;<a href=inform:/doc404.html><img border=0 src=inform:/doc_images/help.png></a>||
 status alternative ||Using 'Release along with the introductory postcard'&nbsp;<a href=inform:/doc404.html><img border=0 src=inform:/doc_images/help.png></a>||

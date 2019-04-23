@@ -4,6 +4,8 @@
     <dict>
         <key>Graphics</key>
         <dict>
+            <key>1</key>
+            <string>/Users/brentscott/Documents/GitHub/Escape-Inform-Game/Escape!.materials/Cover.png</string>
         </dict>
     </dict>
 </plist>

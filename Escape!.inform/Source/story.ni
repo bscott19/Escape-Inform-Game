@@ -1,7 +1,18 @@
 "Escape!" by Brent Scott
 
+The release number is 1. 
+The story creation year is 2019. 
+The story headline is "An interactive fiction escape room". 
+The story genre is "Logic/Puzzle". 
+
+The story description is "The door just locked shut and 1 hour on the large wall clock starts counting down. You have just one hour to solve the clues, puzzles and patterns to escape the room. Your friend is here to help, but just got done drinking quite a lot so I’m not sure how much help he’ll be. Good luck breaking out!".
+
+Release along with cover art.
+Release along with an interpreter.
+Release along with the library card.
+
 [Passcode door credit Felix Larsson on infiction.org ~ https://intfiction.org/t/i-just-want-to-create-a-door-with-a-password-answered/2273/4 ~ Original code altered for this game]
-[Much of Red Painting and NPC derived from Mrs. Kiang's code, and would not be possible without her!]
+[Much of Red Painting and NPC derived from Mrs. Kiang's code, and would not be possible without her help]
 
 [---Beginning the game---]
 
@@ -14,6 +25,8 @@ When play begins:
 	move player to NE Zone, without printing a room description. 
 
 [---Basic Rules---]
+
+Rule for deciding whether all includes something: it does not.
 
 When play begins: 
     now left hand status line is "You can walk to the: [exit list]"; 
@@ -216,6 +229,33 @@ Instead of waking Friend when Friend is asleep:
 	
 Instead of waking Friend when Friend is awake:
 	say "I'm awake already! What do you need?".
+	
+
+[TO WIN]
+
+[W
+Open desk drawer
+Take paperclip
+Unfold Paperclip
+S
+E
+Open closet door
+S
+Take unidentified key
+N
+W
+Wake friend
+Open hidden door with unidentified key
+W
+X computer
+E
+E
+N
+X exit door
+6264
+E
+
+Win!]
 
 
 
